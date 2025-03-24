@@ -1,0 +1,35 @@
+<!-- UC-2 -->
+<div>
+  <h1>{{this.title}}</h1>
+  <img [src] = "imgUrl" (click) = "onClick($event)"
+      alt = "None"
+    />
+</div>
+
+<!-- UC-3 -->
+<button (click)="onClick($event)">Go To Website</button>
+
+<!-- UC-4 -->
+<div>
+  <h1>{{this.userName}}</h1>
+  <img [src] = "imgUrl" (click) = "onClick($event)"
+      alt = "None"
+    />
+</div>
+ <div>
+  <input [(ngModel)]="userName" />
+  <br/><br/>
+ </div>
+
+<!-- UC-5 -->
+<div>
+  <h1>Hello {{this.userName}} from BridgeLabz</h1>
+  <img [src] = "imgUrl" (click) = "onClick($event)"
+      alt = "None"
+    />
+</div>
+<div>
+  <input (input)="onInput($event)" [(ngModel)]="userName" />
+  <span class= error-output> {{this.nameError}} </span>
+</div>
+<router-outlet></router-outlet>
